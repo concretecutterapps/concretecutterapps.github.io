@@ -19,9 +19,9 @@ img { display: block; max-width: 100%; }
 a { color: var(--accent); }
 .container { width: min(calc(100% - 32px), var(--max-width)); margin-inline: auto; }
 .site-header { border-bottom: 1px solid var(--border); background: rgba(13, 16, 18, 0.88); position: sticky; top: 0; z-index: 10; backdrop-filter: blur(16px); }
-.site-header .container { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-.brand { display: inline-flex; align-items: center; gap: 12px; color: var(--text); font-size: 1.12rem; font-weight: 800; text-decoration: none; }
-.brand img { width: 64px; height: 64px; object-fit: contain; }
+.site-header .container { min-height: 88px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.brand { display: inline-flex; align-items: center; color: var(--text); text-decoration: none; flex: 0 0 auto; }
+.brand img { width: clamp(180px, 18vw, 240px); height: auto; max-height: 66px; object-fit: contain; object-position: left center; }
 nav { display: flex; flex-wrap: wrap; gap: 18px; }
 nav a { color: var(--muted); text-decoration: none; font-weight: 600; }
 nav a:hover, nav a:focus-visible { color: var(--text); }
@@ -80,6 +80,7 @@ footer { border-top: 1px solid var(--border); color: var(--muted); padding-block
 @media (max-width: 720px) {
   .site-header { position: static; }
   .site-header .container { align-items: flex-start; flex-direction: column; padding-block: 16px; }
+  .brand img { width: min(76vw, 240px); max-height: none; }
   nav { gap: 10px 16px; }
   .hero { padding-block: 54px 58px; }
   h1 { font-size: clamp(2.35rem, 13vw, 3.9rem); }
