@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://concretecutterapps.github.io/sitemap.xml
