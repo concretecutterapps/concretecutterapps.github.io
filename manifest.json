@@ -1,0 +1,18 @@
+{
+  "name": "Concrete Cutter Calculator",
+  "short_name": "Concrete Cutter",
+  "description": "Practical calculations for concrete cutting, core drilling and lifting.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0d1012",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "/assets/logo.png?v=20260802",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
