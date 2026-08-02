@@ -4,14 +4,23 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Concrete Cutter Calculator samler praktiske beregninger for betongsaging, kjerneboring og løfting i én app.">
+  <meta property="og:title" content="Concrete Cutter Calculator">
+  <meta property="og:description" content="Praktiske beregninger for betongsaging og kjerneboring – bygget for fagfolk i felt.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="/assets/logo.png">
   <title>Concrete Cutter Calculator</title>
+  <link rel="icon" href="/assets/logo.png" type="image/png">
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
   <header class="site-header">
     <div class="container">
-      <a class="brand" href="/">Concrete Cutter</a>
+      <a class="brand" href="/" aria-label="Concrete Cutter – forsiden">
+        <img src="/assets/logo.png" alt="" width="52" height="52">
+        <span>Concrete Cutter</span>
+      </a>
       <nav aria-label="Hovedmeny">
+        <a href="#screenshots">Appen</a>
         <a href="/privacy/">Personvern</a>
         <a href="/support/">Brukerstøtte</a>
         <a href="/faq/">FAQ</a>
@@ -22,12 +31,24 @@
 
   <main>
     <section class="container hero">
-      <p class="eyebrow">Concrete Cutter Apps</p>
-      <h1>Praktiske beregninger for betongsaging og kjerneboring</h1>
-      <p class="lead">Concrete Cutter Calculator samler nyttige verktøy for fagfolk i én rask og oversiktlig app.</p>
-      <div class="actions">
-        <a class="button" href="https://play.google.com/store/apps/details?id=com.concretecutter.app">Se i Google Play</a>
-        <a class="button secondary" href="/support/">Få hjelp</a>
+      <div class="hero-copy">
+        <p class="eyebrow">Concrete Cutter Apps</p>
+        <h1>Praktiske beregninger for betongsaging og kjerneboring</h1>
+        <p class="lead">Concrete Cutter Calculator samler nyttige verktøy for fagfolk i én rask, oversiktlig og feltklar app.</p>
+        <div class="actions">
+          <a class="button" href="https://play.google.com/store/apps/details?id=com.concretecutter.app">Se i Google Play</a>
+          <a class="button secondary" href="#screenshots">Se appen</a>
+        </div>
+        <ul class="hero-points" aria-label="Hovedfordeler">
+          <li>Fungerer offline</li>
+          <li>Metriske og britiske enheter</li>
+          <li>Åtte språk</li>
+        </ul>
+      </div>
+      <div class="hero-visual" aria-label="Skjermbilde fra Concrete Cutter Calculator">
+        <div class="phone-frame featured-phone">
+          <img src="/assets/screen-home.jpg" alt="Hovedskjermen i Concrete Cutter Calculator" width="640" height="1280">
+        </div>
       </div>
     </section>
 
@@ -41,6 +62,32 @@
         <article class="feature"><h3>Offline først</h3><p>Kjerneberegningene utføres lokalt uten krav om internett.</p></article>
         <article class="feature"><h3>Enheter</h3><p>Støtte for både metriske og britiske måleenheter.</p></article>
         <article class="feature"><h3>Åtte språk</h3><p>Norsk, engelsk, svensk, dansk, tysk, polsk, nederlandsk og finsk.</p></article>
+      </div>
+    </section>
+
+    <section id="screenshots" class="showcase-section" aria-labelledby="screenshots-heading">
+      <div class="container">
+        <p class="eyebrow">Se appen</p>
+        <h2 id="screenshots-heading">Utvalgte verktøy</h2>
+        <p class="section-lead">Et ryddig grensesnitt gir raske beregninger uten unødvendige steg.</p>
+        <div class="screenshot-grid">
+          <figure class="screenshot-card">
+            <div class="phone-frame"><img src="/assets/screen-home.jpg" alt="Hovedmenyen i Concrete Cutter Calculator" loading="lazy" width="640" height="1280"></div>
+            <figcaption><strong>Alt samlet</strong><span>Verktøyene er lett tilgjengelige fra hovedskjermen.</span></figcaption>
+          </figure>
+          <figure class="screenshot-card">
+            <div class="phone-frame"><img src="/assets/screen-weight.jpg" alt="Resultat fra vektberegning" loading="lazy" width="640" height="1280"></div>
+            <figcaption><strong>Vektberegning</strong><span>Tydelige resultater for praktisk bruk på arbeidsstedet.</span></figcaption>
+          </figure>
+          <figure class="screenshot-card">
+            <div class="phone-frame"><img src="/assets/screen-slab.jpg" alt="Resultat fra plateoppdeling" loading="lazy" width="640" height="1280"></div>
+            <figcaption><strong>Plateoppdeling</strong><span>Planlegg oppdeling og håndterbare løft på en oversiktlig måte.</span></figcaption>
+          </figure>
+          <figure class="screenshot-card">
+            <div class="phone-frame"><img src="/assets/screen-drilling.jpg" alt="Resultat fra skråboring" loading="lazy" width="640" height="1280"></div>
+            <figcaption><strong>Skråboring</strong><span>Beregn vinkler og mål før rigging og boring.</span></figcaption>
+          </figure>
+        </div>
       </div>
     </section>
 
