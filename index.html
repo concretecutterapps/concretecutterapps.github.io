@@ -11,20 +11,43 @@
   <title>Concrete Cutter Calculator</title>
   <link rel="icon" href="/assets/logo.png?v=20260802" type="image/png">
   <link rel="stylesheet" href="/styles.css">
+  <link rel="alternate" hreflang="no" href="/">
+  <link rel="alternate" hreflang="en" href="/en/">
+  <link rel="alternate" hreflang="sv" href="/sv/">
+  <link rel="alternate" hreflang="da" href="/da/">
+  <link rel="alternate" hreflang="de" href="/de/">
+  <link rel="alternate" hreflang="pl" href="/pl/">
+  <link rel="alternate" hreflang="nl" href="/nl/">
+  <link rel="alternate" hreflang="fi" href="/fi/">
 </head>
 <body>
   <header class="site-header">
-    <div class="container">
+    <div class="container header-layout">
       <a class="brand" href="/" aria-label="Concrete Cutter – forsiden">
         <img src="/assets/logo.png?v=20260802" alt="Concrete Cutter" width="240" height="72">
       </a>
-      <nav aria-label="Hovedmeny">
-        <a href="#screenshots">Appen</a>
-        <a href="/privacy/">Personvern</a>
-        <a href="/support/">Brukerstøtte</a>
-        <a href="/faq/">FAQ</a>
-        <a href="/contact/">Kontakt</a>
-      </nav>
+      <div class="header-actions">
+        <nav aria-label="Hovedmeny">
+          <a href="#screenshots">Appen</a>
+          <a href="/privacy/">Personvern</a>
+          <a href="/support/">Brukerstøtte</a>
+          <a href="/faq/">FAQ</a>
+          <a href="/contact/">Kontakt</a>
+        </nav>
+        <label class="language-picker">
+          <span class="sr-only">Språk</span>
+          <select aria-label="Språk" onchange="window.location.href=this.value">
+            <option value="/" selected>Norsk</option>
+            <option value="/en/">English</option>
+            <option value="/sv/">Svenska</option>
+            <option value="/da/">Dansk</option>
+            <option value="/de/">Deutsch</option>
+            <option value="/pl/">Polski</option>
+            <option value="/nl/">Nederlands</option>
+            <option value="/fi/">Suomi</option>
+          </select>
+        </label>
+      </div>
     </div>
   </header>
 
