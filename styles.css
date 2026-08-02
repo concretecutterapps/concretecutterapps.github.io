@@ -18,10 +18,10 @@ body { margin: 0; min-height: 100vh; line-height: 1.6; background: radial-gradie
 img { display: block; max-width: 100%; }
 a { color: var(--accent); }
 .container { width: min(calc(100% - 32px), var(--max-width)); margin-inline: auto; }
-.site-header { border-bottom: 1px solid var(--border); background: rgba(13, 16, 18, 0.88); position: sticky; top: 0; z-index: 10; backdrop-filter: blur(16px); }
+.site-header { border-bottom: 1px solid var(--border); background: #000; position: sticky; top: 0; z-index: 10; }
 .site-header .container { min-height: 104px; display: flex; align-items: center; justify-content: space-between; gap: 32px; }
-.brand { display: inline-flex; align-items: center; color: var(--text); text-decoration: none; flex: 0 0 auto; overflow: visible; }
-.brand img { width: clamp(260px, 24vw, 360px); height: auto; max-height: 86px; object-fit: contain; object-position: left center; transform: scale(1.06); transform-origin: left center; }
+.brand { display: inline-flex; align-items: center; color: var(--text); text-decoration: none; flex: 0 0 auto; overflow: visible; background: transparent; }
+.brand img { width: clamp(260px, 24vw, 360px); height: auto; max-height: 86px; object-fit: contain; object-position: left center; transform: scale(1.06); transform-origin: left center; background: transparent; }
 nav { display: flex; flex-wrap: wrap; gap: 18px; }
 nav a { color: var(--muted); text-decoration: none; font-weight: 600; }
 nav a:hover, nav a:focus-visible { color: var(--text); }
