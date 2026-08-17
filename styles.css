@@ -46,12 +46,12 @@ h2, h3 { line-height: 1.25; }
 .button.secondary { background: transparent; color: var(--text); border-color: var(--border); }
 .button:hover, .button:focus-visible { filter: brightness(1.08); transform: translateY(-1px); }
 .store-actions { gap: 12px; }
-.store-badge { display: inline-flex; align-items: center; justify-content: center; flex: 0 0 auto; height: 54px; overflow: hidden; border-radius: 9px; text-decoration: none; transition: transform 0.15s ease, filter 0.15s ease; }
+.store-badge { display: inline-flex; align-items: center; justify-content: center; flex: 0 0 auto; height: 48px; overflow: hidden; border-radius: 8px; text-decoration: none; transition: transform 0.15s ease, filter 0.15s ease; }
 .store-badge:hover, .store-badge:focus-visible { filter: brightness(1.08); transform: translateY(-1px); }
-.store-badge img { width: auto; max-width: none; }
-.store-badge-apple img { height: 54px; }
-.store-badge-google { width: 181px; }
-.store-badge-google img { height: 70px; }
+.store-badge img { display: block; width: auto; max-width: none; }
+.store-badge-apple img { height: 48px; }
+.store-badge-google { width: 161px; height: 48px; }
+.store-badge-google img { height: 62px; width: auto; }
 .hero-points { display: flex; flex-wrap: wrap; gap: 10px 22px; margin: 28px 0 0; padding: 0; list-style: none; color: var(--muted); font-weight: 700; }
 .hero-points li::before { content: "✓"; color: var(--accent); margin-right: 8px; }
 .hero-visual { display: flex; justify-content: center; }
