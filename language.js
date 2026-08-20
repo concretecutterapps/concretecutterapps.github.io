@@ -23,6 +23,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  if (/\/privacy\/$/.test(path)) {
+    const privacyScript = document.createElement('script');
+    privacyScript.src = '/privacy-ga4.js';
+    document.head.appendChild(privacyScript);
+  }
+
   if (path === '/' && !localStorage.getItem('cc-language')) {
     location.replace(`/en/${suffix}`);
   } else if (path === '/' && localStorage.getItem('cc-language') === 'en') {
