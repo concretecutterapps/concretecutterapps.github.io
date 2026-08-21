@@ -8,6 +8,30 @@ document.addEventListener('DOMContentLoaded', () => {
   const suffix = `${location.search}${location.hash}`;
   const select = document.querySelector('.language-picker select');
 
+  // Keep the public product name consistent across legacy localized markup.
+  const oldName = 'Concrete Cutter Calculator';
+  const newName = 'Concrete Cutter';
+  if (document.title.includes(oldName)) {
+    document.title = document.title.replaceAll(oldName, newName);
+  }
+  document.querySelectorAll('meta[content]').forEach((meta) => {
+    if (meta.content.includes(oldName)) meta.content = meta.content.replaceAll(oldName, newName);
+  });
+  document.querySelectorAll('[aria-label], [alt]').forEach((element) => {
+    if (element.hasAttribute('aria-label') && element.getAttribute('aria-label').includes(oldName)) {
+      element.setAttribute('aria-label', element.getAttribute('aria-label').replaceAll(oldName, newName));
+    }
+    if (element.hasAttribute('alt') && element.getAttribute('alt').includes(oldName)) {
+      element.setAttribute('alt', element.getAttribute('alt').replaceAll(oldName, newName));
+    }
+  });
+  const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+  const textNodes = [];
+  while (walker.nextNode()) textNodes.push(walker.currentNode);
+  textNodes.forEach((node) => {
+    if (node.nodeValue.includes(oldName)) node.nodeValue = node.nodeValue.replaceAll(oldName, newName);
+  });
+
   if (select) {
     const codeOption = Array.from(select.options).some((option) => option.value === lang);
     select.value = codeOption ? lang : (lang === 'no' ? '/' : `/${lang}/`);
