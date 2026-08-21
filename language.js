@@ -55,12 +55,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (path === '/' && !localStorage.getItem('cc-language')) {
     location.replace(`/en/${suffix}`);
-  } else if (path === '/' && localStorage.getItem('cc-language') === 'en') {
-    location.replace(`/en/${suffix}`);
+    return;
   }
-});
+  if (path === '/' && localStorage.getItem('cc-language') === 'en') {
+    location.replace(`/en/${suffix}`);
+    return;
+  }
 
-const analyticsScript = document.createElement('script');
-analyticsScript.src = '/analytics.js';
-analyticsScript.async = true;
-document.head.appendChild(analyticsScript);
+  // Load analytics after title/metadata normalization so GA4 records the correct page title.
+  const analyticsScript = document.createElement('script');
+  analyticsScript.src = '/analytics.js';
+  analyticsScript.async = true;
+  document.head.appendChild(analyticsScript);
+});
