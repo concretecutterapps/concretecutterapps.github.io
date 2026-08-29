@@ -25,18 +25,25 @@ document.addEventListener('click', (event) => {
   if (!link) return;
 
   const href = link.href;
-  let eventName = link.dataset.analyticsEvent || '';
+  const params = {
+    link_url: href,
+    link_text: (link.textContent || link.getAttribute('aria-label') || '').trim().slice(0, 100),
+    tool: link.dataset.tool || undefined
+  };
 
-  if (!eventName && href.includes('apps.apple.com')) eventName = 'app_store_click';
-  if (!eventName && href.includes('play.google.com')) eventName = 'google_play_click';
-  if (!eventName && link.dataset.tool) eventName = 'tool_cta_click';
+  const explicitEvent = link.dataset.analyticsEvent;
+  if (explicitEvent) {
+    window.ccTrack(explicitEvent, params);
+  }
 
-  if (eventName) {
-    window.ccTrack(eventName, {
-      link_url: href,
-      link_text: (link.textContent || link.getAttribute('aria-label') || '').trim().slice(0, 100),
-      tool: link.dataset.tool || undefined
-    });
+  if (href.includes('apps.apple.com')) {
+    window.ccTrack('app_store_click', params);
+  } else if (href.includes('play.google.com')) {
+    window.ccTrack('google_play_click', params);
+  }
+
+  if (link.dataset.tool) {
+    window.ccTrack('tool_cta_click', params);
   }
 });
 
