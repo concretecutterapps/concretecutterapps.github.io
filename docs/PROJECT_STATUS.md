@@ -1,44 +1,55 @@
 # Concrete Cutter Website – Project status
 
 ## Active
-- Issue: #25 — Website SEO + acquisition overhaul
-- Branch: `feat/website-seo-acquisition-overhaul`
-- Goal: improve organic search visibility, social sharing and conversion to App Store / Google Play without turning the site into low-value SEO content.
+- Issue: #27 — Homepage visual V2 – stronger app showcase and conversion
+- Branch: `feat/homepage-visual-v2`
+- Goal: make the app feel immediately more professional and desirable when visitors land on the site, while preserving the SEO/acquisition foundation from #25.
 
-## Completed in #25
-- Standardized the public product name as **Concrete Cutter** directly in HTML instead of relying on JavaScript replacement.
-- Added consistent canonical URLs, hreflang clusters, Open Graph, Twitter metadata and crawl directives across the existing 8-language site.
-- Added structured data for Concrete Cutter Apps and the mobile app, covering both Android and iOS.
-- Removed the automatic first-visit redirect from `/` to `/en/`; language switching now remains explicit and preserves the current page plus query/hash parameters.
-- Added GA4 events for App Store clicks, Google Play clicks, language changes, tool CTAs and web weight calculations.
-- Added a lightweight 1200×630 social sharing card.
-- Added shared styling and JavaScript for acquisition/tool pages.
-- Added five useful web entry pages in each of the 8 languages:
-  - concrete weight calculator
-  - core drilling / angled drilling guide
-  - concrete saw overcut guide
-  - slab division / weight planning guide
-  - stitch drilling guide
-- Added a functional browser-based concrete weight calculator to every localized weight page.
-- Linked the new tools visibly from every localized homepage.
-- Expanded `sitemap.xml` from 40 to 80 URLs and added `lastmod` for the release date.
-- Preserved `robots.txt`, store links, privacy/support/FAQ/contact pages and the existing visual identity.
-- Merged prior mobile language-picker fix #24 before starting this work to avoid overlapping CSS changes.
+## Completed foundation — #25
+- Public product name standardized as **Concrete Cutter** directly in HTML.
+- Canonical URLs, hreflang clusters, Open Graph, Twitter metadata and crawl directives across all 8 languages.
+- Structured data for Concrete Cutter Apps and the Android/iOS app.
+- Explicit language switching without automatic first-visit redirect.
+- GA4 events for store clicks, language changes, tool CTAs and web weight calculations.
+- Lightweight 1200×630 social sharing card.
+- Five useful localized web entry pages in all 8 languages.
+- Functional browser-based concrete weight calculator in all 8 languages.
+- Sitemap expanded from 40 to 80 URLs.
+- #24 mobile language-picker fix merged before the SEO work.
+- #26 merged to `main` on 2026-08-29.
+
+## Homepage visual V2 — #27
+Implemented on all 8 localized homepages:
+- Stronger conversion-focused hero copy.
+- Three-screen app presentation in the hero using existing app screenshots.
+- Industrial dark visual direction with Concrete Cutter orange accents and subtle grid/glow depth.
+- Larger, clearer App Store / Google Play calls to action.
+- Field-ready benefit pills retained and visually emphasized.
+- Premium feature cards with stronger hierarchy and interaction.
+- Upgraded screenshot showcase with staggered phone presentation.
+- Web tools section reframed as a premium teaser for the full app.
+- New localized final download CTA near the bottom of every homepage.
+- Dedicated `home-v2.css` so tool/support/privacy pages keep their existing layout.
+- Mobile breakpoints and the existing reduced-motion accessibility behavior preserved.
+- New analytics event on the final CTA: `homepage_final_store_click`.
 
 ## Tracking
-GA4 now distinguishes:
+GA4 distinguishes:
 - `app_store_click`
 - `google_play_click`
 - `language_change`
 - `tool_cta_click`
 - `web_weight_calculation`
+- `homepage_final_store_click`
 
 ## Follow-up after release
+- Verify GitHub Pages deploy and inspect desktop/mobile live.
 - Add the sitemap in Google Search Console and monitor indexing/queries.
-- Use UTM-tagged links when sharing into trade groups so traffic and store-click conversion can be compared by market/source.
-- Review Search Console query data before creating any additional SEO pages; only add pages that provide distinct useful content.
+- Use UTM-tagged links for Facebook/trade-group sharing by market.
+- Compare landing-page traffic with App Store / Play click events before making further conversion changes.
 
 ## Change log
 - 2026-08-29: #24 merged (mobile language picker).
-- 2026-08-29: #25 created.
-- 2026-08-29: SEO/acquisition overhaul implemented across 8 languages with 40 new localized tool pages.
+- 2026-08-29: #26 merged — SEO/acquisition overhaul with 40 new localized tool pages.
+- 2026-08-29: #27 created — homepage visual V2.
+- 2026-08-29: Homepage visual V2 implemented across all 8 languages.
