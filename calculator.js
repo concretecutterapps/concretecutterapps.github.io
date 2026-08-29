@@ -50,8 +50,8 @@ document.addEventListener('DOMContentLoaded', () => {
         convertDimensionValues(oldDimensionUnit, newDimensionUnit);
         const currentDensity = numberValue(density);
         density.value = system === 'imperial'
-          ? String(Number((currentDensity * KG_PER_LB / M3_PER_FT3).toFixed(1)))
-          : String(Number((currentDensity * M3_PER_FT3 / KG_PER_LB).toFixed(0)));
+          ? String(Number((currentDensity / KG_PER_LB * M3_PER_FT3).toFixed(1)))
+          : String(Number((currentDensity * KG_PER_LB / M3_PER_FT3).toFixed(0)));
       }
 
       dimensionUnit.innerHTML = system === 'imperial'
