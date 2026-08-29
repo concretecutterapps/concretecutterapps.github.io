@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Concrete Cutter">
+  <rect width="512" height="512" rx="92" fill="#0d1012"/>
+  <circle cx="256" cy="256" r="158" fill="none" stroke="#f28c28" stroke-width="34"/>
+  <circle cx="256" cy="256" r="38" fill="#f28c28"/>
+  <path d="M256 64v52M256 396v52M64 256h52M396 256h52M120 120l37 37M355 355l37 37M392 120l-37 37M157 355l-37 37" stroke="#f5f7f8" stroke-width="22" stroke-linecap="round"/>
+</svg>

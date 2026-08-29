@@ -1,18 +1,19 @@
 {
   "name": "Concrete Cutter",
   "short_name": "Concrete Cutter",
-  "description": "Practical calculations for concrete cutting, core drilling and lifting.",
-  "start_url": "/",
+  "description": "Professional calculations for concrete cutting, core drilling, lifting and slab work.",
+  "start_url": "/en/",
   "scope": "/",
   "display": "standalone",
   "background_color": "#0d1012",
   "theme_color": "#000000",
+  "categories": ["business", "utilities", "productivity"],
   "icons": [
     {
-      "src": "/assets/logo.png?v=20260802",
+      "src": "/assets/icon.svg",
       "sizes": "any",
-      "type": "image/png",
-      "purpose": "any"
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
     }
   ]
 }
