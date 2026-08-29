@@ -26,10 +26,10 @@
 .home-page nav a:hover::after,.home-page nav a:focus-visible::after { transform:scaleX(1); }
 
 .home-page .hero {
-  position:relative; isolation:isolate; min-height:730px;
-  grid-template-columns:minmax(0,.95fr) minmax(440px,1.05fr);
-  gap:clamp(48px,7vw,104px);
-  padding-block:clamp(72px,8vw,112px) clamp(84px,9vw,126px);
+  position:relative; isolation:isolate; min-height:670px;
+  grid-template-columns:minmax(0,1.08fr) minmax(410px,.92fr);
+  gap:clamp(36px,5vw,72px);
+  padding-block:clamp(54px,5.5vw,76px) clamp(64px,6vw,88px);
 }
 .home-page .hero::before {
   content:""; position:absolute; z-index:-2; top:8%; right:-16%; width:760px; height:760px;
@@ -56,15 +56,15 @@
   box-shadow:0 0 18px var(--accent);
 }
 .home-page .hero h1 {
-  max-width:780px; margin-bottom:24px;
-  font-size:clamp(3.2rem,6.6vw,6.05rem); line-height:.96; letter-spacing:-.058em;
-  text-wrap:balance; text-shadow:0 18px 55px rgba(0,0,0,.34);
+  max-width:780px; margin-bottom:20px;
+  font-size:clamp(3rem,4.6vw,4.75rem); line-height:.98; letter-spacing:-.052em;
+  text-wrap:wrap; text-shadow:0 18px 55px rgba(0,0,0,.34);
 }
 .home-page .hero .lead {
   max-width:680px; margin:0; color:#cbd1d5;
-  font-size:clamp(1.08rem,1.8vw,1.3rem); line-height:1.65; text-wrap:pretty;
+  font-size:clamp(1.06rem,1.45vw,1.2rem); line-height:1.55; text-wrap:pretty;
 }
-.home-page .hero .actions { margin-top:34px; }
+.home-page .hero .actions { margin-top:26px; }
 .home-page .hero .store-badge { height:54px; box-shadow:0 12px 34px rgba(0,0,0,.28); }
 .home-page .hero .store-badge-apple img { height:54px; }
 .home-page .hero .store-badge-google { width:181px; height:54px; }
@@ -73,18 +73,18 @@
   min-height:54px; padding-inline:22px; border-color:rgba(255,255,255,.18);
   background:rgba(255,255,255,.035); backdrop-filter:blur(8px);
 }
-.home-page .hero-points { gap:10px; margin-top:30px; }
+.home-page .hero-points { gap:10px; margin-top:20px; }
 .home-page .hero-points li {
   padding:8px 12px; border:1px solid rgba(255,255,255,.09); border-radius:999px;
   background:rgba(255,255,255,.035); color:#d7dcdf; box-shadow:0 8px 25px rgba(0,0,0,.12);
 }
 
 .home-page .hero-visual {
-  position:relative; min-height:610px; display:grid; place-items:center;
+  position:relative; min-height:560px; display:grid; place-items:center;
   perspective:1400px; overflow:visible;
 }
 .home-page .hero-visual::before,.home-page .hero-visual::after {
-  content:""; position:absolute; top:78px; width:min(238px,42%); height:505px;
+  content:""; position:absolute; top:58px; width:min(230px,42%); height:485px;
   border:8px solid #080a0b; border-radius:34px;
   background-color:#090b0c; background-repeat:no-repeat; background-position:top center; background-size:cover;
   box-shadow:0 34px 85px rgba(0,0,0,.52),0 0 0 1px rgba(255,255,255,.16);
@@ -99,7 +99,7 @@
   transform:rotate(8deg) translateY(34px) scale(.88);
 }
 .home-page .featured-phone {
-  z-index:3; width:min(330px,58%); padding:9px; border-color:rgba(255,255,255,.25); border-radius:38px;
+  z-index:3; width:min(315px,58%); padding:9px; border-color:rgba(255,255,255,.25); border-radius:38px;
   transform:translateY(-6px);
   box-shadow:0 42px 110px rgba(0,0,0,.65),0 0 0 1px rgba(255,255,255,.12),0 0 80px rgba(242,140,40,.14);
   animation:home-app-float 6s ease-in-out infinite;
@@ -192,6 +192,29 @@
 .home-page .final-cta .store-badge { box-shadow:0 13px 34px rgba(0,0,0,.32); }
 .home-page .card-grid { padding-top:0; }
 .home-page .card { border-color:rgba(255,255,255,.075); background:rgba(255,255,255,.025); }
+
+@media (min-width:901px) and (max-height:950px) {
+  .home-page .hero {
+    min-height:620px;
+    padding-block:52px 64px;
+  }
+  .home-page .hero h1 {
+    font-size:clamp(3rem,4.2vw,4.25rem);
+  }
+  .home-page .hero .lead {
+    font-size:1.08rem;
+    line-height:1.5;
+  }
+  .home-page .hero .actions { margin-top:24px; }
+  .home-page .hero-points { margin-top:18px; }
+  .home-page .hero-visual { min-height:520px; }
+  .home-page .hero-visual::before,.home-page .hero-visual::after {
+    top:48px;
+    width:min(218px,41%);
+    height:455px;
+  }
+  .home-page .featured-phone { width:min(300px,57%); }
+}
 
 @media (max-width:1120px) {
   .home-page .hero { grid-template-columns:minmax(0,1fr) minmax(390px,.9fr); gap:34px; }
