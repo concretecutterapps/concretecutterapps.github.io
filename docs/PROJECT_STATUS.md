@@ -40,6 +40,13 @@ The website now combines three layers:
 - `authority_store_click` measures store CTA activity.
 - Sitemap expanded from **81 to 88 URLs**.
 
+## Web monetization / calculator V2 — #35
+- AdSense publisher verification prepared for `ca-pub-2502421026163101`.
+- Root `ads.txt` mirrors the authorized Google seller entry already used by `app-ads.txt`.
+- Weight calculator V2 supports rectangle and core/cylinder geometry, metric/imperial inputs, editable density and kg/lb output.
+- Manual ad placement is reserved but stays inactive until AdSense approval and a real ad-unit slot exist.
+- EEA/UK/Switzerland consent/CMP setup is required before live web ad serving.
+
 ## Tracking
 GA4 distinguishes:
 - `app_store_click`
@@ -64,3 +71,4 @@ GA4 distinguishes:
 - 2026-08-29: #30 merged — English concrete-cutting calculator app authority hub.
 - 2026-08-29: #31 — authority hub localized across all 8 website languages.
 - 2026-08-29: #33 — desktop homepage hero tightened after live viewport review.
+- 2026-08-29: #35 — AdSense verification and web weight calculator V2.
