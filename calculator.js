@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return Number.isFinite(parsed) && parsed >= 0 ? parsed : 0;
     };
 
-    const calculate = () => {
+    const calculate = (trackInteraction = false) => {
       const l = numberValue(length);
       const w = numberValue(width);
       const t = numberValue(thickness);
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
         maximumFractionDigits: 3
       }) + ' m³';
 
-      if (typeof window.ccTrack === 'function') {
+      if (trackInteraction && typeof window.ccTrack === 'function') {
         clearTimeout(calculator._trackTimer);
         calculator._trackTimer = setTimeout(() => {
           window.ccTrack('web_weight_calculation', { tool: 'concrete_weight' });
@@ -35,7 +35,10 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     };
 
-    [length, width, thickness, density].forEach((input) => input.addEventListener('input', calculate));
-    calculate();
+    [length, width, thickness, density].forEach((input) => {
+      input.addEventListener('input', () => calculate(true));
+    });
+
+    calculate(false);
   });
 });
