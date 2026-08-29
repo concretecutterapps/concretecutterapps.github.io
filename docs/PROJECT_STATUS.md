@@ -58,6 +58,11 @@ GA4 distinguishes:
 - `homepage_final_store_click`
 - `authority_store_click`
 
+## Search Console
+- Google Search Console URL-prefix property: `https://concretecutterapps.github.io/`
+- HTML verification file added at `/google35458b38325e0e63.html`.
+- Next after ownership verification: submit `sitemap.xml` and request indexing for the English authority page.
+
 ## Search follow-up
 - Submit `sitemap.xml` in Google Search Console.
 - Use URL Inspection → Request indexing for the English authority page first, then the strongest local-market pages.
@@ -73,3 +78,4 @@ GA4 distinguishes:
 - 2026-08-29: #31 — authority hub localized across all 8 website languages.
 - 2026-08-29: #33 — desktop homepage hero tightened after live viewport review.
 - 2026-08-29: #35 — AdSense verification and web weight calculator V2.
+- 2026-08-29: #37 — Google Search Console verification file.
