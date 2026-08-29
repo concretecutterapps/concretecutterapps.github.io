@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Betong vektkalkulator – beregn vekt fra mål og tetthet | Concrete Cutter</title>
-  <meta name="description" content="Beregn omtrentlig vekt for en rektangulær betongdel direkte i nettleseren. Oppgi lengde, bredde, tykkelse og tetthet.">
+  <meta name="description" content="Beregn vekt for rektangulære betongdeler og kjerner/sylindre. Bytt mellom metriske og britiske mål og vis resultat i kg eller lb.">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <meta name="theme-color" content="#000000">
   <link rel="canonical" href="https://concretecutterapps.github.io/concrete-weight-calculator/">
@@ -20,17 +20,17 @@
   <meta property="og:site_name" content="Concrete Cutter">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Betong vektkalkulator | Concrete Cutter">
-  <meta property="og:description" content="Beregn betongvekt raskt i nettleseren, og bruk Concrete Cutter for flere former og verktøy i felt.">
+  <meta property="og:description" content="Beregn vekt for rektangulære betongdeler og kjerner/sylindre. Bytt mellom metriske og britiske mål og vis resultat i kg eller lb.">
   <meta property="og:url" content="https://concretecutterapps.github.io/concrete-weight-calculator/">
   <meta property="og:locale" content="nb_NO">
   <meta property="og:image" content="https://concretecutterapps.github.io/assets/social-card.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://concretecutterapps.github.io/assets/social-card.png">
   <link rel="icon" href="/assets/logo.png?v=20260802" type="image/png">
-  <link rel="stylesheet" href="/styles.css?v=20260829-seo1">
+  <link rel="stylesheet" href="/styles.css?v=20260829-calc2">
   <script defer src="/analytics.js?v=20260829"></script>
   <script defer src="/language.js?v=20260829"></script>
-  <script defer src="/calculator.js?v=20260829"></script>
+  <script defer src="/calculator.js?v=20260829-v2"></script>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@graph":[{"@type":"WebPage","url":"https://concretecutterapps.github.io/concrete-weight-calculator/","name":"Betong vektkalkulator","description":"Beregn omtrentlig vekt for en rektangulær betongdel fra mål og tetthet.","inLanguage":"no","about":{"@type":"MobileApplication","name":"Concrete Cutter"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Concrete Cutter","item":"https://concretecutterapps.github.io/"},{"@type":"ListItem","position":2,"name":"Betong vektkalkulator","item":"https://concretecutterapps.github.io/concrete-weight-calculator/"}]}]}
   </script>
@@ -51,16 +51,18 @@
       <p class="breadcrumbs"><a href="/">Concrete Cutter</a> / Verktøy</p>
       <p class="eyebrow">Gratis nettkalkulator</p>
       <h1>Betong vektkalkulator</h1>
-      <p class="lead">Beregn omtrentlig vekt for en rektangulær betongdel direkte i nettleseren. Oppgi lengde, bredde, tykkelse og tetthet.</p>
+      <p class="lead">Beregn omtrentlig vekt for en rektangulær betongdel eller en kjerne/sylinder. Velg metriske eller britiske mål og resultat i kg eller lb.</p>
     </section>
     <div class="container tool-layout">
       <article class="tool-content">
-        <h2>Slik beregnes vekten</h2>
-        <p>Kalkulatoren finner volumet fra målene og multipliserer volumet med materialets tetthet. For vanlig betong brukes ofte en omtrentlig tetthet rundt 2 400 kg/m³, men den faktiske verdien varierer med betongtype, armering og sammensetning. Bruk derfor riktig prosjektverdi når den er kjent.</p>
-        <h2>Når er beregningen nyttig?</h2>
-        <p>En rask vektberegning er nyttig når et utskåret stykke skal planlegges for løft, transport eller videre oppdeling. Vekten alene avgjør ikke hvordan delen kan løftes sikkert. Løfteutstyr, innfesting, tyngdepunkt, kapasitet og lokale HMS-krav må vurderes separat.</p>
-        <h2>Mer enn et rektangel</h2>
-        <p>Concrete Cutter-appen har flere former, materialvalg, prosjekt-historikk og andre verktøy for betongsaging og kjerneboring. Nettkalkulatoren er bevisst enkel slik at den kan brukes raskt fra hvilken som helst nettleser.</p>
+        <h2>To former – samme prinsipp</h2>
+        <p>For rektangulære deler beregnes volumet fra lengde × bredde × tykkelse. For kjerner og sylindre brukes diameter og dybde/lengde. Volumet multipliseres deretter med materialets tetthet.</p>
+        <h2>Metrisk eller imperial</h2>
+        <p>Velg mm, cm eller m for metrisk input, eller tommer og fot for imperial input. Tettheten vises som kg/m³ eller lb/ft³, og resultatet kan vises i både kg og lb.</p>
+        <h2>Bruk riktig tetthet</h2>
+        <p>Standardverdien 2 400 kg/m³ er et vanlig planleggingstall for normal betong, men faktisk tetthet varierer med betongtype, armering og sammensetning. Bruk prosjektverdi når den er kjent.</p>
+        <h2>Planleggingshjelp – ikke løfteplan</h2>
+        <p>Vektberegningen er et hjelpemiddel før løft, transport eller videre oppdeling. Løfteutstyr, innfesting, tyngdepunkt, kapasitet, armering og HMS må vurderes for den konkrete jobben.</p>
         <div class="inline-cta">
           <strong>Trenger du flere former og fagverktøy?</strong>
           <p>Concrete Cutter er tilgjengelig for Android og iPhone.</p>
@@ -70,19 +72,31 @@
           </div>
         </div>
       </article>
-      <aside class="tool-aside">
+            <aside class="tool-aside">
         <div class="calculator-card" data-weight-calculator>
           <h2>Gratis vektkalkulator</h2>
-          <p>Rektangulær del, mål i millimeter.</p>
-          <div class="calculator-form">
-            <div class="calculator-field"><label for="length">Lengde (mm)</label><input id="length" name="length" inputmode="decimal" value="1000"></div>
-            <div class="calculator-field"><label for="width">Bredde (mm)</label><input id="width" name="width" inputmode="decimal" value="500"></div>
-            <div class="calculator-field"><label for="thickness">Tykkelse (mm)</label><input id="thickness" name="thickness" inputmode="decimal" value="200"></div>
-            <div class="calculator-field"><label for="density">Tetthet (kg/m³)</label><input id="density" name="density" inputmode="decimal" value="2400"></div>
+          <div class="calculator-controls">
+            <div class="calculator-field"><label for="shape">Form</label><select id="shape" name="shape"><option value="rectangle">Rektangel / plate</option><option value="core">Kjerne / sylinder</option></select></div>
+            <div class="calculator-field"><label for="unitSystem">Målesystem</label><select id="unitSystem" name="unitSystem"><option value="metric">Metrisk</option><option value="imperial">Imperial</option></select></div>
+            <div class="calculator-field"><label for="dimensionUnit">Måleenhet</label><select id="dimensionUnit" name="dimensionUnit"><option value="mm">mm</option><option value="cm">cm</option><option value="m">m</option></select></div>
+            <div class="calculator-field"><label for="weightUnit">Resultat</label><select id="weightUnit" name="weightUnit"><option value="kg">kg</option><option value="lb">lb</option></select></div>
           </div>
-          <div class="calculator-result"><span>Omtrentlig vekt</span><strong data-result-value>240 kg</strong><span data-result-detail>0,1 m³</span></div>
+          <div class="calculator-shape-fields" data-shape-fields="rectangle">
+            <div class="calculator-field"><label for="length">Lengde (<span data-dimension-unit>mm</span>)</label><input id="length" name="length" data-dimension-input inputmode="decimal" value="1000"></div>
+            <div class="calculator-field"><label for="width">Bredde (<span data-dimension-unit>mm</span>)</label><input id="width" name="width" data-dimension-input inputmode="decimal" value="500"></div>
+            <div class="calculator-field"><label for="thickness">Tykkelse (<span data-dimension-unit>mm</span>)</label><input id="thickness" name="thickness" data-dimension-input inputmode="decimal" value="200"></div>
+          </div>
+          <div class="calculator-shape-fields" data-shape-fields="core" hidden>
+            <div class="calculator-field"><label for="diameter">Diameter (<span data-dimension-unit>mm</span>)</label><input id="diameter" name="diameter" data-dimension-input inputmode="decimal" value="300"></div>
+            <div class="calculator-field"><label for="depth">Dybde / lengde (<span data-dimension-unit>mm</span>)</label><input id="depth" name="depth" data-dimension-input inputmode="decimal" value="200"></div>
+          </div>
+          <div class="calculator-form">
+            <div class="calculator-field"><label for="density">Tetthet (<span data-density-unit>kg/m³</span>)</label><input id="density" name="density" inputmode="decimal" value="2400"></div>
+          </div>
+          <div class="calculator-result"><span>Omtrentlig vekt</span><strong data-result-value>240 kg</strong><span data-result-detail>0,1 m³</span><span data-result-secondary>529 lb</span></div>
           <p class="calculator-note">Planleggingshjelp. Bekreft materialdata, løfteutstyr og sikker metode for den konkrete jobben.</p>
         </div>
+        <div class="ad-slot-reserved" data-ad-slot-placeholder hidden aria-hidden="true"></div>
       </aside>
     </div>
   </main>

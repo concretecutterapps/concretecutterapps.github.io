@@ -167,3 +167,44 @@ footer { border-top: 1px solid var(--border); color: var(--muted); padding-block
   .tool-layout { grid-template-columns: 1fr; }
   .tool-aside { position: static; }
 }
+
+/* Weight calculator V2 */
+.calculator-controls {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 12px;
+  margin-top: 20px;
+}
+.calculator-field select {
+  width: 100%;
+  min-height: 46px;
+  padding: 10px 38px 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: #0d1012;
+  color: var(--text);
+  font: inherit;
+}
+.calculator-field select:focus {
+  outline: 3px solid var(--accent-soft);
+  border-color: var(--accent);
+}
+.calculator-shape-fields {
+  display: grid;
+  gap: 15px;
+  margin-top: 15px;
+}
+.calculator-shape-fields[hidden] { display: none !important; }
+.calculator-result [data-result-secondary] {
+  display: block;
+  margin-top: 3px;
+  font-size: .9rem;
+}
+.ad-slot-reserved {
+  margin-top: 18px;
+  min-height: 0;
+}
+.ad-slot-reserved[hidden] { display: none !important; }
+@media (max-width: 460px) {
+  .calculator-controls { grid-template-columns: 1fr; }
+}
