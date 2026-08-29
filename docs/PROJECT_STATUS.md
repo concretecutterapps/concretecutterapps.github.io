@@ -1,9 +1,9 @@
 # Concrete Cutter Website – Project status
 
 ## Active
-- Issue: #27 — Homepage visual V2 – stronger app showcase and conversion
-- Branch: `feat/homepage-visual-v2`
-- Goal: make the app feel immediately more professional and desirable when visitors land on the site, while preserving the SEO/acquisition foundation from #25.
+- Issue: #29 — Concrete cutting calculator app authority page
+- Branch: `feat/concrete-cutting-authority-page`
+- Goal: strengthen topical authority around the English search intent for concrete cutting calculator apps and core drilling field calculations.
 
 ## Completed foundation — #25
 - Public product name standardized as **Concrete Cutter** directly in HTML.
@@ -11,27 +11,33 @@
 - Structured data for Concrete Cutter Apps and the Android/iOS app.
 - Explicit language switching without automatic first-visit redirect.
 - GA4 events for store clicks, language changes, tool CTAs and web weight calculations.
-- Lightweight 1200×630 social sharing card.
 - Five useful localized web entry pages in all 8 languages.
 - Functional browser-based concrete weight calculator in all 8 languages.
 - Sitemap expanded from 40 to 80 URLs.
-- #24 mobile language-picker fix merged before the SEO work.
 - #26 merged to `main` on 2026-08-29.
 
 ## Homepage visual V2 — #27
-Implemented on all 8 localized homepages:
-- Stronger conversion-focused hero copy.
-- Three-screen app presentation in the hero using existing app screenshots.
-- Industrial dark visual direction with Concrete Cutter orange accents and subtle grid/glow depth.
-- Larger, clearer App Store / Google Play calls to action.
-- Field-ready benefit pills retained and visually emphasized.
-- Premium feature cards with stronger hierarchy and interaction.
-- Upgraded screenshot showcase with staggered phone presentation.
-- Web tools section reframed as a premium teaser for the full app.
-- New localized final download CTA near the bottom of every homepage.
-- Dedicated `home-v2.css` so tool/support/privacy pages keep their existing layout.
-- Mobile breakpoints and the existing reduced-motion accessibility behavior preserved.
-- New analytics event on the final CTA: `homepage_final_store_click`.
+Completed and merged in #28:
+- Stronger conversion-focused hero copy across all 8 languages.
+- Three-screen app presentation using existing screenshots.
+- Industrial dark visual direction with Concrete Cutter orange accents.
+- Larger App Store / Google Play calls to action.
+- Upgraded feature cards, screenshot showcase and web-tool teaser.
+- Localized final download CTA.
+- Dedicated `home-v2.css` to isolate homepage presentation.
+- `homepage_final_store_click` analytics event.
+
+## Authority page — #29
+Implemented:
+- New English hub: `/en/concrete-cutting-calculator-app/`.
+- Direct definition of Concrete Cutter as a field calculator for concrete cutting and core drilling.
+- Distinguishes field cutting/drilling calculations from generic pour/volume calculators.
+- Connects concrete weight, core drilling, overcut, slab division, stitch drilling and lifting-point planning into one topical hub.
+- Uses practical field scenarios and safety/planning limitations rather than keyword-only copy.
+- MobileApplication, WebPage and Breadcrumb structured data.
+- App Store and Google Play CTAs with `authority_store_click` tracking.
+- Internal links from the English homepage and all five English tool pages.
+- Sitemap expanded from 80 to 81 URLs.
 
 ## Tracking
 GA4 distinguishes:
@@ -41,15 +47,18 @@ GA4 distinguishes:
 - `tool_cta_click`
 - `web_weight_calculation`
 - `homepage_final_store_click`
+- `authority_store_click`
 
 ## Follow-up after release
-- Verify GitHub Pages deploy and inspect desktop/mobile live.
-- Add the sitemap in Google Search Console and monitor indexing/queries.
-- Use UTM-tagged links for Facebook/trade-group sharing by market.
-- Compare landing-page traffic with App Store / Play click events before making further conversion changes.
+- Verify GitHub Pages deployment.
+- Submit `sitemap.xml` in Google Search Console.
+- Use URL Inspection → Request indexing for `/en/concrete-cutting-calculator-app/`.
+- Monitor Search Console queries around concrete cutting app, concrete cutting calculator, core drilling calculator and related terms.
+- Use UTM-tagged links for trade-group sharing by market.
+- Add new content only where it answers a distinct field question.
 
 ## Change log
-- 2026-08-29: #24 merged (mobile language picker).
-- 2026-08-29: #26 merged — SEO/acquisition overhaul with 40 new localized tool pages.
-- 2026-08-29: #27 created — homepage visual V2.
-- 2026-08-29: Homepage visual V2 implemented across all 8 languages.
+- 2026-08-29: #24 merged — mobile language picker.
+- 2026-08-29: #26 merged — SEO/acquisition overhaul with 40 localized tool pages.
+- 2026-08-29: #28 merged — homepage visual V2 across 8 languages.
+- 2026-08-29: #29 created — English concrete cutting calculator app authority hub.
