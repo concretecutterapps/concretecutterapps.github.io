@@ -41,8 +41,9 @@ The website now combines three layers:
 - Sitemap expanded from **81 to 88 URLs**.
 
 ## Web monetization / calculator V2 — #35
-- AdSense publisher verification prepared for `ca-pub-2502421026163101`.
-- Root `ads.txt` mirrors the authorized Google seller entry already used by `app-ads.txt`.
+- AdSense publisher account is enabled for web monetization (`ca-pub-2502421026163101`).
+- Site ownership verification is prepared via root `ads.txt`, using the authorized Google seller entry already used by `app-ads.txt`.
+- AdSense JavaScript is intentionally not loaded yet; web ad serving waits for site approval, a real ad-unit slot and the EEA/UK/Switzerland consent/CMP setup.
 - Weight calculator V2 supports rectangle and core/cylinder geometry, metric/imperial inputs, editable density and kg/lb output.
 - Manual ad placement is reserved but stays inactive until AdSense approval and a real ad-unit slot exist.
 - EEA/UK/Switzerland consent/CMP setup is required before live web ad serving.
