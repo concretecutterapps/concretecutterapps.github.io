@@ -16,8 +16,9 @@ The website now combines three layers:
 - Functional browser-based concrete weight calculator in each language.
 - Sitemap expanded from 40 to 80 URLs.
 
-## Homepage visual V2 — #27 / #28
+## Homepage visual V2 — #27 / #28 / #33
 - Stronger conversion-focused hero across all 8 languages.
+- Desktop hero fit refined after live review: smaller but still dominant H1, wider copy column, tighter vertical rhythm and viewport-height tuning so store CTAs remain visible on common laptop/desktop screens.
 - Three-screen app presentation using existing screenshots.
 - Industrial dark visual direction with Concrete Cutter orange accents.
 - Larger App Store / Google Play calls to action.
@@ -62,3 +63,4 @@ GA4 distinguishes:
 - 2026-08-29: #28 merged — homepage visual V2 across 8 languages.
 - 2026-08-29: #30 merged — English concrete-cutting calculator app authority hub.
 - 2026-08-29: #31 — authority hub localized across all 8 website languages.
+- 2026-08-29: #33 — desktop homepage hero tightened after live viewport review.
