@@ -59,7 +59,7 @@ GA4 distinguishes:
 - `authority_store_click`
 
 ## Search Console
-- Google Search Console URL-prefix property: `https://concretecutterapps.github.io/`
+- Google Search Console URL-prefix property: `https://concretecutter.app/`
 - HTML verification file added at `/google35458b38325e0e63.html`.
 - Next after ownership verification: submit `sitemap.xml` and request indexing for the English authority page.
 
