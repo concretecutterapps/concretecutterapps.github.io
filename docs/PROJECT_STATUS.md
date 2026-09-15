@@ -1,10 +1,11 @@
 # Concrete Cutter Website – Project status
 
 ## Current website release
-The website now combines three layers:
+The website now combines four layers:
 1. a conversion-focused multilingual product homepage,
 2. localized search/tool pages for concrete-cutting field tasks,
-3. a multilingual authority hub that connects Concrete Cutter directly with concrete cutting and core drilling search intent.
+3. a multilingual authority hub that connects Concrete Cutter directly with concrete cutting and core drilling search intent,
+4. original field-oriented editorial content intended to be useful even without installing the app.
 
 ## SEO/acquisition foundation — #25 / #26
 - Public product name standardized as **Concrete Cutter** directly in HTML.
@@ -48,6 +49,15 @@ The website now combines three layers:
 - Manual ad placement is reserved but stays inactive until AdSense approval and a real ad-unit slot exist.
 - EEA/UK/Switzerland consent/CMP setup is required before live web ad serving.
 
+## AdSense content-quality remediation — #42
+- 2026-09-15 AdSense review returned **Low value content**; ownership and `ads.txt` were accepted.
+- Added a Norwegian standalone field guide covering real pre-cut/pre-drill workflow, weight, saw sequence, overcut, angled drilling, rig space, stitch drilling and slab division.
+- The guide cross-links the existing specialist pages so the site has a clearer information architecture rather than isolated search landing pages.
+- Norwegian homepage now exposes the field guide in primary navigation and the guide/tool section.
+- Sitemap includes the new editorial page and refreshed modification dates for changed Norwegian content.
+- Strategy is quality-first: do not create translated copies merely to increase URL count. Translate/expand only when each page remains useful and natural in its market.
+- AdSense re-review remains a manual step after deployment and live verification.
+
 ## Tracking
 GA4 distinguishes:
 - `app_store_click`
@@ -61,14 +71,13 @@ GA4 distinguishes:
 ## Search Console
 - Google Search Console URL-prefix property: `https://concretecutter.app/`
 - HTML verification file added at `/google35458b38325e0e63.html`.
-- Next after ownership verification: submit `sitemap.xml` and request indexing for the English authority page.
+- `sitemap.xml` should remain submitted after deployments; request indexing selectively for new high-value editorial pages.
 
 ## Search follow-up
-- Submit `sitemap.xml` in Google Search Console.
-- Use URL Inspection → Request indexing for the English authority page first, then the strongest local-market pages.
 - Monitor queries around concrete cutting app/calculator, core drilling calculator and localized equivalents.
 - Use UTM-tagged links for trade-group sharing by market.
 - Add future pages only when they answer a distinct field question rather than creating thin search pages.
+- After #42 is live, request indexing for `/field-guide/` and allow Google to crawl the improved internal links before AdSense re-review.
 
 ## Change log
 - 2026-08-29: #24 merged — mobile language picker.
@@ -79,3 +88,4 @@ GA4 distinguishes:
 - 2026-08-29: #33 — desktop homepage hero tightened after live viewport review.
 - 2026-08-29: #35 — AdSense verification and web weight calculator V2.
 - 2026-08-29: #37 — Google Search Console verification file.
+- 2026-09-15: #42 — AdSense low-value-content remediation: original field guide, stronger internal linking and sitemap refresh.
