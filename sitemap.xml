@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://concretecutter.app/manual/</loc><lastmod>2026-09-26</lastmod></url>
+  <url><loc>https://concretecutter.app/en/manual/</loc><lastmod>2026-09-26</lastmod></url>
+  <url><loc>https://concretecutter.app/sv/manual/</loc><lastmod>2026-09-26</lastmod></url>
+  <url><loc>https://concretecutter.app/da/manual/</loc><lastmod>2026-09-26</lastmod></url>
+  <url><loc>https://concretecutter.app/de/manual/</loc><lastmod>2026-09-26</lastmod></url>
+  <url><loc>https://concretecutter.app/pl/manual/</loc><lastmod>2026-09-26</lastmod></url>
+  <url><loc>https://concretecutter.app/nl/manual/</loc><lastmod>2026-09-26</lastmod></url>
+  <url><loc>https://concretecutter.app/fi/manual/</loc><lastmod>2026-09-26</lastmod></url>
   <url><loc>https://concretecutter.app/</loc><lastmod>2026-09-15</lastmod></url>
   <url><loc>https://concretecutter.app/field-guide/</loc><lastmod>2026-09-25</lastmod></url>
   <url><loc>https://concretecutter.app/en/field-guide/</loc><lastmod>2026-09-25</lastmod></url>
