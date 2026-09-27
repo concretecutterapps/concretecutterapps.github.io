@@ -85,6 +85,9 @@ h2, h3 { line-height: 1.25; }
 .notice { padding: 18px 20px; border-left: 4px solid var(--accent); background: var(--surface); border-radius: 8px; }
 .contact-address { font-size: clamp(1.15rem, 3vw, 1.5rem); font-weight: 800; }
 footer { border-top: 1px solid var(--border); color: var(--muted); padding-block: 30px; }
+.footer-content { display: flex; align-items: center; justify-content: space-between; gap: 18px; flex-wrap: wrap; }
+.footer-social { color: var(--muted); font-weight: 700; text-decoration: none; }
+.footer-social:hover, .footer-social:focus-visible { color: var(--text); }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
