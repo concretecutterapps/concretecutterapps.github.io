@@ -1,12 +1,67 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const prefixes = { no: '', en: 'en', sv: 'sv', da: 'da', de: 'de', pl: 'pl', nl: 'nl', fi: 'fi' };
+  const supported = ['no', 'en', 'sv', 'da', 'de', 'pl', 'nl', 'fi'];
+  const countryToLanguage = { NO: 'no', SE: 'sv', DK: 'da', DE: 'de', PL: 'pl', NL: 'nl', FI: 'fi' };
   const path = location.pathname;
-  const match = path.match(/^\/(en|sv|da|de|pl|nl|fi)(\/|$)/);
-  const lang = document.documentElement.lang || (match ? match[1] : 'no');
+  const match = path.match(/^\/(no|en|sv|da|de|pl|nl|fi)(\/|$)/);
+  const lang = document.documentElement.lang || (match ? match[1] : 'en');
   const stripped = match ? path.slice(match[0].length - 1) : path;
   const page = stripped === '/' ? '' : stripped.replace(/^\//, '').replace(/\/$/, '');
   const suffix = `${location.search}${location.hash}`;
   const select = document.querySelector('.language-picker select');
+  const manualLanguageKey = 'cc-language';
+  const autoLanguageKey = 'cc-auto-language';
+  const autoLanguageTimeKey = 'cc-auto-language-time';
+  const autoLanguageMaxAge = 30 * 24 * 60 * 60 * 1000;
+
+  const homePathFor = (language) => {
+    if (language === 'en') return '/';
+    return `/${language}/`;
+  };
+
+  const routeFor = (language) => {
+    if (!supported.includes(language)) language = 'en';
+    if (!page) return homePathFor(language);
+    const prefix = language === 'no' ? '' : `/${language}`;
+    return `${prefix}/${page}/`;
+  };
+
+  const redirectFromRoot = (language) => {
+    const target = homePathFor(language);
+    if (target !== '/' && path === '/') {
+      location.replace(`${target}${suffix}`);
+      return true;
+    }
+    return false;
+  };
+
+  if (path === '/') {
+    const manualLanguage = localStorage.getItem(manualLanguageKey);
+    if (manualLanguage && supported.includes(manualLanguage)) {
+      if (redirectFromRoot(manualLanguage)) return;
+    } else {
+      const cachedLanguage = localStorage.getItem(autoLanguageKey);
+      const cachedAt = Number(localStorage.getItem(autoLanguageTimeKey) || 0);
+      if (cachedLanguage && supported.includes(cachedLanguage) && Date.now() - cachedAt < autoLanguageMaxAge) {
+        if (redirectFromRoot(cachedLanguage)) return;
+      } else {
+        const controller = new AbortController();
+        const timeout = setTimeout(() => controller.abort(), 1800);
+        fetch('https://ipapi.co/country/', { signal: controller.signal })
+          .then((response) => response.ok ? response.text() : Promise.reject(new Error('country lookup failed')))
+          .then((country) => {
+            const detectedLanguage = countryToLanguage[country.trim().toUpperCase()] || 'en';
+            localStorage.setItem(autoLanguageKey, detectedLanguage);
+            localStorage.setItem(autoLanguageTimeKey, String(Date.now()));
+            redirectFromRoot(detectedLanguage);
+          })
+          .catch(() => {
+            localStorage.setItem(autoLanguageKey, 'en');
+            localStorage.setItem(autoLanguageTimeKey, String(Date.now()));
+          })
+          .finally(() => clearTimeout(timeout));
+      }
+    }
+  }
 
   const headerActions = document.querySelector('.header-actions');
   const languagePicker = document.querySelector('.language-picker');
@@ -40,15 +95,19 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   if (select) {
-    const expectedValue = lang === 'no' ? '/' : `/${lang}/`;
+    const expectedValue = page ? (lang === 'no' ? '/' : `/${lang}/`) : homePathFor(lang);
     if (Array.from(select.options).some((option) => option.value === expectedValue)) {
       select.value = expectedValue;
     }
 
     select.addEventListener('change', () => {
       const raw = select.value;
-      const selected = raw.match(/^\/(en|sv|da|de|pl|nl|fi)\/$/)?.[1] || 'no';
-      localStorage.setItem('cc-language', selected);
+      let selected = 'en';
+      if (raw === '/no/' || (raw === '/' && page)) selected = 'no';
+      else if (raw === '/' && !page) selected = 'en';
+      else selected = raw.match(/^\/(en|sv|da|de|pl|nl|fi)\/$/)?.[1] || 'en';
+
+      localStorage.setItem(manualLanguageKey, selected);
 
       if (typeof window.ccTrack === 'function') {
         window.ccTrack('language_change', {
@@ -57,8 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       }
 
-      const prefix = prefixes[selected] ? `/${prefixes[selected]}` : '';
-      location.href = `${prefix}/${page ? `${page}/` : ''}${suffix}`;
+      location.href = `${routeFor(selected)}${suffix}`;
     });
   }
 
